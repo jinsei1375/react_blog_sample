@@ -1,4 +1,3 @@
-// components/SortableList.tsx
 import { DndContext, closestCenter } from '@dnd-kit/core';
 import {
   SortableContext,
@@ -26,7 +25,7 @@ const SortableItem = ({ id }: { id: string }) => {
       {...attributes}
       {...listeners}
       className={`w-full border rounded-md px-4 py-2 bg-white shadow-sm cursor-move ${
-        isDragging ? 'opacity-50' : ''
+        isDragging && 'opacity-50'
       }`}
     >
       {id}
